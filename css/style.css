@@ -1,0 +1,256 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f5e0d6, #f6c89f);
+  color: #220c07;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+nav {
+  background: #5d2c1a;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f6c89f;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffe8d6;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #f6c89f;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 4rem;
+  background: linear-gradient(to right bottom, #fbe8dc, #f6c89f);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
+  color: #5d2c1a;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #6f3e2b;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: #a6572b;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.cta-button:hover {
+  background: #873f1f;
+  transform: translateY(-4px) scale(1.05);
+}
+
+
+.hero-image {
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+  left: -30px;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 130%;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  transform: rotate(-2deg);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg);}
+  50% { transform: translateY(-15px) rotate(1deg);}
+}
+
+
+section {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #5d2c1a;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+
+.features-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feature-card {
+  background: #fff0e6;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+
+#newsletter {
+  background: #f6c89f;
+  border-radius: 20px;
+  text-align: center;
+  color: #5d2c1a;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.newsletter-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+.newsletter-form input {
+  width: 280px;
+}
+
+.newsletter-form button {
+  background: #a6572b;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #873f1f;
+  transform: translateY(-2px) scale(1.05);
+}
+
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #5d2c1a;
+  color: #ffe8d6;
+  margin-top: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-image img {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

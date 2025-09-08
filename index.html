@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bistro Bakery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">🥐 Bistro Bakery</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Ons Verhaal</a></li>
+        <li><a href="#features">Waarom Wij</a></li>
+        <li><a href="#newsletter">Nieuwsbrief</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-left">
+      <img src="images/cr.png" alt="Croissants" class="hero-croissant">
+    </div>
+    <div class="hero-right">
+      <h1>Ambachtelijk & Vers</h1>
+      <p>Ervaar de warmte van onze bakkerij, waar croissantjes en taarten met liefde worden gemaakt.</p>
+      <a href="#story" class="btn">Ontdek Ons Verhaal</a>
+    </div>
+  </section>
+
+
+  <section id="story" class="section-glass">
+    <h2>Ons Verhaal</h2>
+    <p>Sinds 1985 maken wij elke dag vers brood en gebak met traditionele technieken en de beste ingrediënten.</p>
+  </section>
+
+  <section id="features" class="section-glass">
+    <h2>Waarom Bistro Bakery?</h2>
+    <div class="features-grid">
+      <div class="feature-card"><p>Verse ingrediënten, lokaal geleverd.</p></div>
+      <div class="feature-card"><p>Decennia ervaring in elk recept.</p></div>
+      <div class="feature-card"><p>Elke ochtend vers uit de oven.</p></div>
+    </div>
+  </section>
+
+
+  <section id="newsletter" class="section-glass">
+    <h2>Schrijf je in</h2>
+    <p>Blijf op de hoogte van onze nieuwste creaties en aanbiedingen.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Jouw e-mailadres..." required>
+      <button type="submit">Inschrijven</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bistro Bakery. Alle rechten voorbehouden.</p>
+  </footer>
 </body>
 </html>
