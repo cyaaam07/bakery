@@ -1,66 +1,133 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bistro Bakery</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro | Bakery</title>
+   
+
 <body>
+  
+    <nav class="nav">
+        <div class="logo">1</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="#order" class="nav-btn">Order Online</a>
+            <a href="#reserve" class="nav-btn primary">Reservation</a>
+        </div>
+    </nav>
 
-  <nav>
-    <div class="nav-container">
-      <div class="logo">🥐 Bistro Bakery</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#story">Ons Verhaal</a></li>
-        <li><a href="#features">Waarom Wij</a></li>
-        <li><a href="#newsletter">Nieuwsbrief</a></li>
-      </ul>
-    </div>
-  </nav>
+   
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bistro | Bakery</h1>
+            <p>Freshly baked pastries, artisanal breads and gourmet delights made with passion. Experience the perfect blend of traditional techniques and modern flavors in every bite.</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+        <div class="hero-image">
+           
+                <div class="logo-small">M</div>
+                <h3>Menu</h3>
+                <p>Appetizer • Wine</p>
+                <button class="view-btn">→</button>
+            </div>
+        </div>
+    </header>
 
+    
+    <section class="story">
+        <div class="story-img">
+             <img src="images/" alt="image">
+            <div class="chef-badge">
+                <div class="chef-info">
+                      <img src="images/" alt="image">
+                    <div class="chef-details">
+                        <h4>Chef Henry Hane</h4>
+                        <p>Head Chef</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="story-text">
+            <h2>Our story</h2>
+            <p>Founded in 1985 by master Chef Eric Lanlard, Bistro Bakery began as a small neighborhood gem with a big dream: to bring authentic European flavors to our local community. With over three decades of tradition, we combine time-honored techniques with the finest ingredients to create memorable experiences that bring families together.</p>
+            <a href="#about" class="btn-outline">Learn more</a>
+        </div>
+    </section>
 
-  <section id="home" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-left">
-      <img src="images/cr.png" alt="Croissants" class="hero-croissant">
-    </div>
-    <div class="hero-right">
-      <h1>Ambachtelijk & Vers</h1>
-      <p>Ervaar de warmte van onze bakkerij, waar croissantjes en taarten met liefde worden gemaakt.</p>
-      <a href="#story" class="btn">Ontdek Ons Verhaal</a>
-    </div>
-  </section>
+  
+    <section class="why">
+        <h2>Why Dine with Us?</h2>
+        <p class="why-subtitle">Indulge in our bakery in an authentic BISTRO ambiance. Experience exquisite flavors, exquisite atmosphere, and exceptional service - creating unforgettable culinary memories.</p>
+        <div class="why-grid">
+            <div class="card">
+                <div class="card-icon">0</div>
+                <h3>Fresh, Local Ingredients</h3>
+                <p>Hand-picked daily from trusted local farms, ensuring the highest quality and supporting our community.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">1</div>
+                <h3>Artisan Craftsmanship</h3>
+                <p>Traditional European baking techniques passed down through generations and perfected over time.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">2</div>
+                <h3>Smoking Atmosphere</h3>
+                <p>A warm, inviting space where you can relax and enjoy your meal in comfort and style.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">3</div>
+                <h3>Community-Oriented</h3>
+                <p>A gathering place for neighbors and friends, fostering connections over exceptional food.</p>
+            </div>
+        </div>
+        <div class="food-showcase">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23654321' width='400' height='300' rx='8'/><circle cx='200' cy='150' r='80' fill='%23d2691e'/><circle cx='180' cy='130' r='25' fill='%23f4a460'/><circle cx='220' cy='140' r='30' fill='%23f4a460'/><circle cx='200' cy='170' r='35' fill='%23f4a460'/><rect x='150' y='220' width='100' height='20' rx='10' fill='%238b4513'/></svg>" alt="Gourmet Sandwich">
+            <button class="play-button">▶</button>
+        </div>
+    </section>
 
+ 
+    <section class="dishes">
+        <h2>Our customers' favorite dishes</h2>
+        <p class="dishes-subtitle">Whether you're in the mood for a hearty croissant, a delicate French toast, a gourmet Croque-monsieur, or seasonal delights - our menu offers something to delight every palate.</p>
+        <div class="dishes-grid">
+            <div class="dish">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'><rect fill='%23f5deb3' width='300' height='250' rx='8'/><ellipse cx='150' cy='125' rx='80' ry='40' fill='%23daa520'/><ellipse cx='130' cy='110' rx='20' ry='15' fill='%23ffd700'/><ellipse cx='170' cy='115' rx='25' ry='18' fill='%23ffd700'/><ellipse cx='150' cy='140' rx='30' ry='20' fill='%23ffd700'/></svg>" alt="Pastries">
+                <p>Pastries & Croissants</p>
+            </div>
+            <div class="dish">
+                <img src="images/" alt="image">
+            </div>
+            <div class="dish">
+            <img src="images/" alt="image">
+                <p>Gourmet Croissant</p>
+            </div>
+            <div class="dish">
+                <img src="images/" alt="image">
+            </div>
+        </div>
+    </section>
 
-  <section id="story" class="section-glass">
-    <h2>Ons Verhaal</h2>
-    <p>Sinds 1985 maken wij elke dag vers brood en gebak met traditionele technieken en de beste ingrediënten.</p>
-  </section>
+  
+    <section class="newsletter">
+        <h2>Subscribe to our newsletter</h2>
+        <p>Stay updated with our latest offerings and special events</p>
+        <form>
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
 
-  <section id="features" class="section-glass">
-    <h2>Waarom Bistro Bakery?</h2>
-    <div class="features-grid">
-      <div class="feature-card"><p>Verse ingrediënten, lokaal geleverd.</p></div>
-      <div class="feature-card"><p>Decennia ervaring in elk recept.</p></div>
-      <div class="feature-card"><p>Elke ochtend vers uit de oven.</p></div>
-    </div>
-  </section>
-
-
-  <section id="newsletter" class="section-glass">
-    <h2>Schrijf je in</h2>
-    <p>Blijf op de hoogte van onze nieuwste creaties en aanbiedingen.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Jouw e-mailadres..." required>
-      <button type="submit">Inschrijven</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Bistro Bakery. Alle rechten voorbehouden.</p>
-  </footer>
+  
+    <footer class="footer">
+        <p>&copy; 2025 Bistro Bakery. All rights reserved.</p>
+    </footer>
 </body>
 </html>
