@@ -1,301 +1,477 @@
-  * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-        }
-
-   
-        .nav {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            z-index: 10;
-            color: white;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #d4af37;
-        }
-
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-btn {
-            padding: 8px 20px;
-            border: 1px solid white;
-            background: transparent;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .nav-btn.primary {
-            background: #d4af37;
-            border-color: #d4af37;
-            color: #1a1a1a;
-        }
-
-        .nav-btn:hover {
-            background: white;
-            color: #1a1a1a;
-        }
-
-.hero {
-    background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
-        url('../images/juist.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    color: white;
-    padding: 0 5%;
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  color: #1a1a1a;
 }
 
 
-        .hero-content {
-            max-width: 500px;
-            z-index: 2;
-        }
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  z-index: 10;
+  color: white;
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 30px;
-            font-weight: normal;
-            line-height: 1.1;
-        }
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-        .hero p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-            line-height: 1.5;
-            opacity: 0.9;
-        }
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
 
-        .btn {
-            background: #d4af37;
-            color: #1a1a1a;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-        .btn:hover {
-            background: #b8941f;
-            transform: translateY(-2px);
-        }
+.nav-links a:hover {
+  color: #d4af37;
+}
 
-        
-        .hero-image {
-            position: relative;
-            max-width: 600px;
-            z-index: 2;
-        }
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
 
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+.nav-btn {
+  padding: 8px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
 
-        .menu-card {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            width: 150px;
-            text-align: center;
-        }
+.nav-btn.primary {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #1a1a1a;
+}
 
-        .menu-card .logo-small {
-            width: 40px;
-            height: 40px;
-            background: #8B4513;
-            border-radius: 50%;
-            margin: 0 auto 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
+.nav-btn:hover {
+  background: white;
+  color: #1a1a1a;
+}
 
-        .menu-card h3 {
-            color: #8B4513;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
 
-        .menu-card p {
-            color: #666;
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
+.hero {
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
+    url('../images/juist.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  padding: 0 5%;
+}
 
-        .menu-card .view-btn {
-            width: 30px;
-            height: 30px;
-            background: #d4af37;
-            border: none;
-            border-radius: 50%;
-            color: white;
-            cursor: pointer;
-        }
+.hero-content {
+  max-width: 500px;
+  z-index: 2;
+}
 
-       
-        .story {
-            display: flex;
-            align-items: center;
-            gap: 80px;
-            padding: 100px 5%;
-            background: #2e3a35;
-            color: white;
-        }
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: normal;
+  line-height: 1.1;
+}
 
-        .story-img {
-            flex: 1;
-        }
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
 
-        .story-img img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-        }
+.btn {
+  background: #d4af37;
+  color: #1a1a1a;
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
 
-        .story-text {
-            flex: 1;
-        }
+.btn:hover {
+  background: #b8941f;
+  transform: translateY(-2px);
+}
 
-        .story-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            font-weight: normal;
-        }
 
-        .story-text p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
+.hero-image {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  width: 200px;
+}
 
-        .btn-outline {
-            border: 2px solid #d4af37;
-            padding: 12px 30px;
-            border-radius: 4px;
-            color: #d4af37;
-            text-decoration: none;
-            transition: 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
+.menu-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  text-align: center;
+}
 
-        .btn-outline:hover {
-            background: #d4af37;
-            color: #1a1a1a;
-        }
+.menu-card .logo-small {
+  width: 50px;
+  height: 50px;
+  background: #a48c06;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
 
-       
-        .chef-badge {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            display: inline-block;
-        }
+.menu-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
 
-        .chef-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+.menu-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
 
-        .chef-info img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+.menu-card .view-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-        .chef-details h4 {
-            color: #1a1a1a;
-            margin-bottom: 5px;
-        }
+.menu-card .view-btn:hover {
+  background: #b8941f;
+}
 
-        .chef-details p {
-            color: #666;
-            font-size: 0.9rem;
-        }
 
-        
-        .why {
-            padding: 100px 5%;
-            text-align: center;
-            background: #f8f8f8;
-        }
+.story {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 5%;
+  background: #2e3a35;
+  color: white;
+}
 
-        .why h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
+.story-img {
+  flex: 1;
+}
 
-        .why-subtitle {
-            max-width: 600px;
-            margin: 0 auto 60px;
-            color: #666;
-            line-height: 1.6;
-        }
+.story-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
 
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
+.story-text {
+  flex: 1;
+}
 
-       
+.story-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.story-text p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.btn-outline {
+  border: 2px solid #d4af37;
+  padding: 12px 30px;
+  border-radius: 4px;
+  color: #d4af37;
+  text-decoration: none;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+.chef-badge {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.chef-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.chef-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chef-details h4 {
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.chef-details p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+.why {
+  padding: 100px 5%;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.why h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.why-subtitle {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  padding: 50px 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-icon {
+  margin: 0 auto 20px;
+}
+
+.card-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+.food-showcase {
+  position: relative;
+  max-width: 500px;
+  margin: 60px auto 0;
+}
+
+.food-showcase img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  color: #d4af37;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button:hover {
+  background: #d4af37;
+  color: #fff;
+}
+
+
+.dishes {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.dishes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.dishes-subtitle {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.dish {
+  text-align: center;
+}
+
+.dish img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.dish p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+.newsletter {
+  padding: 80px 5%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.newsletter input {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .story {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .why-grid,
+  .dishes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-links {
+    display: none;
+  }
+
+  .hero-image {
+    position: static;
+    margin-top: 40px;
+  }
+}
