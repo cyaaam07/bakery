@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bistro | Bakery</title>
@@ -8,120 +10,142 @@
 </head>
 <body>
 
-
-  <nav class="nav">
+  <!-- NAVBAR -->
+  <nav class="navbar">
     <div class="logo">Bistro</div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
     <div class="nav-buttons">
-      <a href="#order" class="nav-btn">Order Online</a>
-      <a href="#reserve" class="nav-btn primary">Reservation</a>
+      <a href="#" class="btn nav-btn yellow">Menu</a>
+      <a href="#" class="btn nav-btn primary">Contact us</a>
     </div>
   </nav>
 
-
-  <header class="hero" id="home">
+  <!-- HERO SECTION -->
+  <header class="hero">
     <div class="hero-content">
       <h1>Bistro | Bakery</h1>
-      <p>Freshly baked pastries, artisanal breads and gourmet delights made with passion. Experience the perfect blend of traditional techniques and modern flavors in every bite.</p>
-      <a href="#menu" class="btn">Explore Menu</a>
+      <p>
+        Freshly baked pastries, artisanal breads and gourmet delights made with passion. 
+        Experience the perfect blend of traditional techniques and modern flavors in every bite.
+      </p>
+      <a href="#" class="btn hero-cta">Explore Menu</a>
     </div>
+    <div class="menu-card">
+      <img src="images/menu-icon.svg" alt="Menu logo">
+      <h3>Menu</h3>
+      <p>Appetizer • Wine</p>
+      <button class="view-btn">→</button>
+    </div>
+  </header>
 
-<div class="hero-image">
-  <div class="menu-card">
-    <img src="images/menu-icon.svg" alt="Logo" class="logo-small" />
-    <h3>Menu</h3>
-    <p>Appetizer • Wine</p>
-    <button class="view-btn">→</button>
-  </div>
-</div>
-</header>
-
-
-
-  <section class="story" id="about">
-    <div class="story-img">
-      <img src="images/chef.jpg" alt="Chef baking">
-      <div class="chef-badge">
-        <div class="chef-info">
-          <img src="images/henry.png" alt="Chef portrait">
-          <div class="chef-details">
-            <h4>Chef Henry Hane</h4>
-            <p>Head Chef</p>
-          </div>
-        </div>
-
+  <!-- STORY SECTION -->
+  <section class="story">
+    <div class="story-images">
+      <img src="images/yummy.jpg" alt="Fresh croissants" class="story-main-img">
+      <div class="chef-section">
+        <img src="images/henry.png" alt="Chef Henry Hane" class="chef-img">
+        <p class="chef-name">CHEF HENRY HANÉ</p>
       </div>
     </div>
     <div class="story-text">
       <h2>Our story</h2>
-      <p>Founded in 1985 by master Chef Eric Lanlard, Bistro Bakery began as a small neighborhood gem with a big dream: to bring authentic European flavors to our local community. With over three decades of tradition, we combine time-honored techniques with the finest ingredients to create memorable experiences that bring families together.</p>
-      <a href="#about" class="btn-outline">Learn more</a>
+      <p>
+        Founded in 2015 by pastry chef Julia Simmons, Sweet Delights Bakery has grown 
+        from a small, local shop to a beloved community landmark. Julia’s dream was 
+        to create a space where people could gather, enjoy mouth-watering baked goods, 
+        and feel at home. Today, we continue to honor that vision with every cake, cookie, 
+        and loaf of bread that comes out of our ovens.
+      </p>
+      <a href="#" class="btn-outline">Explore more</a>
+      <img src="images/coffee.png" alt="Coffee cup decoration" class="story-decoration">
     </div>
   </section>
 
- 
-  <section class="why">
+<section class="why">
+  <div class="why-header">
     <h2>Why Dine with Us?</h2>
-    <p class="why-subtitle">Indulge in our bakery in an authentic BISTRO ambiance. Experience exquisite flavors, atmosphere, and exceptional service - creating unforgettable culinary memories.</p>
-    <div class="why-grid">
-      <div class="card">
-        <div class="card-icon"><img src="images/icon-ingredients.svg" alt=""></div>
-        <h3>Fresh, Local Ingredients</h3>
-        <p>Hand-picked daily from trusted local farms, ensuring the highest quality and supporting our community.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><img src="images/icon-artisan.svg" alt=""></div>
-        <h3>Artisan Craftsmanship</h3>
-        <p>Traditional European baking techniques passed down through generations and perfected over time.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><img src="images/icon-atmosphere.svg" alt=""></div>
-        <h3>Inviting Atmosphere</h3>
-        <p>A warm, inviting space where you can relax and enjoy your meal in comfort and style.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><img src="images/icon-community.svg" alt=""></div>
-        <h3>Community-Oriented</h3>
-        <p>A gathering place for neighbors and friends, fostering connections over exceptional food.</p>
-      </div>
+    <p class="why-subtitle">
+      Nestled in the heart of downtown, BISTRO offers an intimate dining experience where culinary artistry meets cozy charm.
+    </p>
+  </div>
+
+  <!-- Croissant decoratie -->
+  <img src="images/croissant.svg" alt="Croissant illustration" class="croissant-bg">
+
+  <div class="why-grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="images/food.svg" alt="Ingredients">
+      <h3>Fresh, Local Ingredients:</h3>
+      <p>Explore More →</p>
     </div>
 
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="images/person-stars.svg" alt="Craft">
+      <h3>Artisan Craftsmanship:</h3>
+      <p>Explore More →</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="images/rainbow.svg" alt="Atmosphere">
+      <h3>Inviting Atmosphere:</h3>
+      <p>Explore More →</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="images/people.svg" alt="Community">
+      <h3>Community-Oriented:</h3>
+      <p>Explore More →</p>
+    </div>
+
+    <!-- Pancake Showcase -->
     <div class="food-showcase">
-      <img src="images/pancakes.jpg" alt="Pancakes">
+      <img src="images/syrup.jpg" alt="Bakery video preview">
       <button class="play-button">▶</button>
     </div>
-  </section>
+  </div>
+</section>
 
 
+  
+
+  <
   <section class="dishes">
     <h2>Our customers' favorite dishes</h2>
-    <p class="dishes-subtitle">Whether you're in the mood for a hearty croissant, a delicate French toast, a gourmet Croque-monsieur, or seasonal delights - our menu offers something to delight every palate.</p>
-    <div class="dishes-grid">
-      <div class="dish">
-        <img src="images/pancakes-dish.jpg" alt="">
-        <p>Nutella Pancakes</p>
+    <p class="dishes-subtitle">
+      Whether you're in the mood for a hearty breakfast, a leisurely lunch, 
+      or an intimate dinner, our culinary team is dedicated to providing 
+      an unforgettable gastronomic journey.
+    </p>
+    <div class="dishes-list">
+      <div class="dish-card">
+        <img src="images/pancakes.jpg" alt="Pastelito Pancakes">
+        <p>Pastelito Pancakes</p>
       </div>
-      <div class="dish">
-        <img src="images/french-toast.jpg" alt="">
-        <p>Orchard Leaf French Toast</p>
+      <div class="dish-card">
+        <img src="images/file.jpg" alt="Croissant Loaf French Toast">
+        <p>Croissant Loaf French Toast</p>
       </div>
-      <div class="dish">
-        <img src="images/croissant.jpg" alt="">
-        <p>Gourmet Croissant</p>
+      <div class="dish-card">
+        <img src="images/croissantjes.webp" alt="Croissant Loaf French Toast">
+        <p>Croissant Loaf French Toast</p>
       </div>
-      <div class="dish">
-        <img src="images/sourdough.jpg" alt="">
-        <p>Smoked Salmon Sourdough</p>
+      <div class="dish-card">
+        <img src="images/bagel.jpg" alt="Smoked Salmon Scramble">
+        <p>Smoked Salmon Scramble</p>
       </div>
     </div>
   </section>
 
- 
+  <!-- NEWSLETTER -->
   <section class="newsletter">
     <h2>Subscribe to our newsletter</h2>
     <p>Stay updated with our latest offerings and special events</p>
@@ -131,39 +155,55 @@
     </form>
   </section>
 
-        <div class="food-showcase">
-            <img src="images/" alt="bakery">
-            <button class="play-button">▶</button>
-        </div>
-    </section>
-
- 
-    <section class="dishes">
-        <h2>Our customers' favorite dishes</h2>
-        <p class="dishes-subtitle">Whether you're in the mood for a hearty croissant, a delicate French toast, a gourmet Croque-monsieur, or seasonal delights - our menu offers something to delight every palate.</p>
-        <div class="dishes-grid">
-            <div class="dish">
-                   <img src="images/" alt="bakery">
-                <p>Pastries & Croissants</p>
-            </div>
-            <div class="dish">
-                <img src="images/" alt="image">
-            </div>
-            <div class="dish">
-            <img src="images/" alt="image">
-                <p>Gourmet Croissant</p>
-            </div>
-            <div class="dish">
-                <img src="images/" alt="image">
-            </div>
-        </div>
-    </section>
-
-
-  
+    <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 Bistro Bakery. All rights reserved.</p>
+    <div class="footer-column">
+      <img src="images/logo-footer.png" alt="Bistro Bakery Logo" class="footer-logo">
+      <p>600 Brickell Ave, Miami, FL 33131<br>
+         (305) 371-4568<br>
+         (WE DO NOT TAKE RESERVATIONS, NO EXCEPTIONS)
+      </p>
+       <div class="socials">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Opportunities</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Location & Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Operational</h3>
+      <p>Mon–Fri: 8:00AM – 4:00PM<br>
+         Sat–Sun: 8:00AM – 4:00PM</p>
+      <p><strong>You need a consult?</strong><br>
+         + (123) 980-567-8990</p>
+    </div>
   </footer>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 BISTRO | BAKERY. All Rights Reserved. | Usman A.</p>
+  </div>
+
 
 </body>
 </html>
