@@ -1,0 +1,48 @@
+.dishes {
+  padding: 120px 8%;
+  text-align: center;
+  background: var(--light-gray);
+}
+
+.dishes h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.dishes-subtitle {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.dishes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.dish-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+
+}
+
+.dish-card:hover {
+  transform: translateY(-10px);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.dish-card p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
