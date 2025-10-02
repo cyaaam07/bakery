@@ -4,7 +4,7 @@
   background: var(--light-gray);
 }
 
-.dishes h2 {
+ .dishes-heading {
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: 300;
