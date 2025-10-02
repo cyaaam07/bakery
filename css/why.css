@@ -75,7 +75,7 @@
 }
 
 .card p {
-  color: #111;
+  color: var(--card-p-text);
   font-size: 0.98rem;
   font-weight: 500;
   margin-top: 32px;

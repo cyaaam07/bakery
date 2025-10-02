@@ -1,6 +1,12 @@
 :root {
   --main-text: #1a1a1a;
   --subtitle-text: #666;
+  --dish-card-text: #333;
+  --card-p-text: #111;
+}
+:root {
+  --main-text: #1a1a1a;
+  --subtitle-text: #666;
 }
 :root {
   --main-text: #1a1a1a;
