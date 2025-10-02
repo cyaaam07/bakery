@@ -27,7 +27,6 @@
 .dish-card {
   text-align: center;
   transition: transform 0.3s ease;
-
 }
 
 .dish-card:hover {
