@@ -1,0 +1,11 @@
+{
+  "favorites": [
+    { "id": 1, "name": "Sourdough Loaf", "description": "Classic sourdough bread with a crispy crust.", "image": "images/sourdough.jpg" },
+    { "id": 2, "name": "Chocolate Croissant", "description": "Flaky croissant filled with rich chocolate.", "image": "images/croissant.jpg" },
+    { "id": 3, "name": "Lemon Tart", "description": "Tangy lemon tart with buttery crust.", "image": "images/lemon-tart.jpg" }
+  ]
+}
+
+
+
+
