@@ -1,0 +1,378 @@
+  /* CSS VARIABELEN - Kleuren die we overal gebruiken */
+    :root {
+      --yellow: #d4af37;
+      --dark-green: #1a2e1a;
+      --light-gray: #f8f8f8;
+    }
+
+    /* RESET - Zorgt dat alles op 0 begint */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* BODY - De basis van de hele pagina */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark-green);
+      color: #fff;
+    }
+
+    /* NAVBAR - Bovenste menu balk */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(26, 46, 26, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 25px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    .nav-btn.yellow {
+      background: var(--yellow);
+      color: #000;
+    }
+
+    .nav-btn.yellow:hover {
+      background: #eecf61;
+      transform: translateY(-2px);
+    }
+
+    .nav-btn.primary {
+      background: #fff;
+      color: #000;
+    }
+
+    .nav-btn.primary:hover {
+      background: #f1f1f1;
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT SECTIE - Alles onder de navbar */
+    .contact-section {
+      margin-top: 100px;
+      padding: 40px 4%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* TITEL */
+    .contact-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--yellow);
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    /* GRID LAYOUT - 2 kolommen naast elkaar */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    /* INFO CARDS - Linker kant */
+    .info-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .info-box h3 {
+      color: var(--yellow);
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .info-box p {
+      color: #ccc;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .info-box a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    .info-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* FORMULIER - Rechter kant */
+    .form-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .form-box h3 {
+      color: var(--yellow);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    /* FORM INPUTS */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--yellow);
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--yellow);
+    }
+
+    /* SUBMIT BUTTON */
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--yellow);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #eecf61;
+      transform: translateY(-2px);
+    }
+
+    /* SUCCESS MESSAGE */
+    .success-msg {
+      display: none;
+      background: rgba(76, 175, 80, 0.2);
+      border: 1px solid #4caf50;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 15px;
+      text-align: center;
+      color: #4caf50;
+    }
+
+    .success-msg.show {
+      display: block;
+    }
+
+    /* KAART SECTIE - Google Maps */
+    .map-section {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      margin-bottom: 50px;
+    }
+
+    .map-section h3 {
+      color: var(--yellow);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .map-container {
+      border-radius: 8px;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* FOOTER */
+    .footer {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 0;
+      padding: 80px 8% 40px;
+      background: var(--light-gray);
+      color: #444;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .footer-column {
+      padding: 0 32px;
+      position: relative;
+    }
+
+    .footer-column:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background: #e0e0e0;
+    }
+
+    .footer-logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .footer-column p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column ul a {
+      text-decoration: none;
+      color: #666;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul a:hover {
+      color: var(--yellow);
+    }
+
+    .socials {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #333;
+      color: #fff;
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+
+    .socials a:hover {
+      background: var(--yellow);
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 30px 8%;
+      background: var(--light-gray);
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* RESPONSIVE - Voor mobiel */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-title {
+        font-size: 2rem;
+      }
+
+      .footer {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-column:not(:first-child)::before {
+        display: none;
+      }
+    }

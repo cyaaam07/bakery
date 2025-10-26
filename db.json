@@ -1,8 +1,26 @@
 {
-  "favorites": [
-    { "id": 1, "name": "Sourdough Loaf", "description": "Classic sourdough bread with a crispy crust.", "image": "images/sourdough.jpg" },
-    { "id": 2, "name": "Chocolate Croissant", "description": "Flaky croissant filled with rich chocolate.", "image": "images/croissant.jpg" },
-    { "id": 3, "name": "Lemon Tart", "description": "Tangy lemon tart with buttery crust.", "image": "images/lemon-tart.jpg" }
+  "categories": [
+    {
+      "name": "Cakejes",
+      "items": [
+        { "name": "Red Velvet Cake", "description": "Fluffy red velvet cake with cream cheese frosting.", "image": "images/gebak.jpg" },
+        { "name": "Lemon Drizzle", "description": "Moist lemon cake with sweet glaze.", "image": "images/gebak2.jpg" }
+      ]
+    },
+    {
+      "name": "Cookies",
+      "items": [
+        { "name": "Chocolate Chip Cookie", "description": "Classic cookie loaded with chocolate chips.", "image": "images/yummy.jpg" },
+        { "name": "Oatmeal Raisin", "description": "Chewy oatmeal cookie with juicy raisins.", "image": "images/img3.webp" }
+      ]
+    },
+    {
+      "name": "Croissantjes",
+      "items": [
+        { "name": "Butter Croissant", "description": "Flaky croissant made with real butter.", "image": "images/croissantjes.webp" },
+        { "name": "Chocolate Croissant", "description": "Croissant filled with rich chocolate.", "image": "images/croissant.jpg" }
+      ]
+    }
   ]
 }
 

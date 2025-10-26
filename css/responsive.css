@@ -1,8 +1,12 @@
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
+  background: none;
+  border: none;
+  z-index: 10000;
 }
 
 .mobile-menu-toggle span {
@@ -10,7 +14,8 @@
   height: 3px;
   background: #fff;
   margin: 3px 0;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .mobile-nav {
@@ -20,142 +25,711 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0, 0, 0, 0.98);
   z-index: 9999;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav.active {
+  display: flex;
+  opacity: 1;
 }
 
 .mobile-nav a {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #d4af37;
 }
 
 .mobile-close {
   position: absolute;
   top: 20px;
-  right: 20px;
-  font-size: 2rem;
+  right: 30px;
+  font-size: 2.5rem;
   color: #fff;
   cursor: pointer;
+  background: none;
+  border: none;
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 1400px) {
+.mobile-close:hover {
+  transform: rotate(90deg);
+}
+
+  /* Large Desktop */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+/* Desktop naar Tablet (1024px - 1399px) */
+@media (max-width: 1399px) {
+  nav {
+    padding: 1rem 5%;
+  }
+  .hero {
+    padding: 120px 5% 80px;
+  }
+  .hero-title {
+    font-size: 4rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  /* Why Grid */
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
+
   .food-showcase {
     grid-column: span 2;
   }
+
+  /* Story Section */
+  .story {
+    padding: 100px 5%;
+  }
+
+  /* Dishes */
+  .dishes {
+    padding: 100px 5%;
+  }
+
+  .dishes-list {
+    gap: 20px;
+  }
+
+  /* Newsletter */
+  .newsletter {
+    padding: 60px 5%;
+  }
 }
 
+/* Tablet liggend(≤1024px) */
 @media (max-width: 1024px) {
-  .hero h1 {
+  
+  .hero {
+    padding: 100px 6% 60px;
+  }
+  .hero-title {
     font-size: 3.5rem;
   }
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-description-block {
+    text-align: center;
+  }
+
+  .menu-card {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  /* Story */
   .story {
     flex-direction: column;
     gap: 50px;
     text-align: center;
-  }
-  .story-images {
-    justify-content: center;
-  }
-  .why-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .menu-card {
-    right: 50%;
-    transform: translateX(50%);
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links,
-  .nav-buttons {
-    display: none;
-  }
-  .mobile-menu-toggle {
-    display: flex;
-  }
-  .hero {
-    padding: 100px 6% 0;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .story {
     padding: 80px 6%;
   }
+
   .story-images {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
   }
-  .story-main-img,
-  .chef-img {
-    width: 250px;
-    height: auto;
+
+  .story-text {
+    max-width: 100%;
   }
+
+  .story-decoration {
+    display: none;
+  }
+
+  /* Why Section */
   .why {
     padding: 80px 6%;
   }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .croissant-bg {
+    width: 150px;
+  }
+
+  /* Dishes */
+  .dishes {
+    padding: 80px 6%;
+  }
+
+  .dishes-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Newsletter */
+  .newsletter {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 6%;
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .newsletter-right > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 60px 6% 30px;
+  }
+}
+
+
+   /* Tablet staand (≤768px - 1023px) */
+
+@media (max-width: 768px) {
+  
+  .nav-links,
+  .nav-buttons {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    padding: 1rem 4%;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 100px 4% 60px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-cta {
+    padding: 12px 30px;
+    font-size: 0.95rem;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+  }
+
+  /* Menu Card */
+  .menu-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 25px 20px;
+  }
+
+  /* Story Section */
+  .story {
+    padding: 60px 4%;
+    gap: 40px;
+  }
+
+  .story-images {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .story-main-img,
+  .chef-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .story-text h2 {
+    font-size: 2rem;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+  }
+
+  .story-text p br {
+    display: none;
+  }
+
+  /* Why Section */
+  .why {
+    padding: 60px 4%;
+  }
+
+  .why-header h2 {
+    font-size: 2rem;
+  }
+
+  .why-subtitle {
+    font-size: 0.95rem;
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .dishes {
-    padding: 80px 6%;
-  }
-  .menu-card {
-    position: absolute;
-    bottom: 80px;
-    right: 4%;
-    background: #fff;
-    color: #1a1a1a;
-    padding: 30px 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    width: 200px;
-    transition: transform 0.3s ease;
-    margin: 0;
-    transform: none;
-  }
-  .footer {
-    grid-template-columns: 1fr;
-    padding: 60px 6% 30px;
-    text-align: center;
-    gap: 30px;
-  }
-  .socials {
-    justify-content: center;
-  }
-}
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
+  .food-showcase {
+    grid-column: 1;
   }
-  .hero-content p {
-    font-size: 1rem;
+
+  .card {
+    padding: 25px 20px;
   }
-  .story-text h2 {
-    font-size: 2rem;
+
+  .card img {
+    width: 50px;
+    height: 50px;
   }
-  .why-header h2 {
-    font-size: 2.5rem;
+
+  .croissant-bg {
+    width: 120px;
+    opacity: 0.15;
   }
+
+  /* Dishes Section */
+  .dishes {
+    padding: 60px 4%;
+  }
+
   .dishes h2 {
     font-size: 2rem;
   }
+
+  .dishes-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .dishes-subtitle br {
+    display: none;
+  }
+
+  .dishes-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dish-card {
+    max-width: 100%;
+  }
+
+  /* Newsletter */
+  .newsletter {
+    padding: 40px 4%;
+  }
+
+  .newsletter-left h2 {
+    font-size: 2rem;
+  }
+
+  .newsletter-right p {
+    font-size: 0.9rem;
+  }
+
   .newsletter form {
     flex-direction: column;
     gap: 15px;
   }
-  .newsletter input {
+
+  .newsletter input,
+  .newsletter button {
     width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 50px 4% 30px;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .footer-logo {
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .footer-column ul {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    padding: 20px 4%;
+    font-size: 0.85rem;
+  }
+}
+
+
+ /*  MOBILE staand (576px - 767px) */
+
+@media (max-width: 576px) {
+ 
+  .hero {
+    padding: 90px 4% 50px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+  }
+
+  /* Story */
+  .story {
+    padding: 50px 4%;
+  }
+
+  .story-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .story-text p {
+    font-size: 0.9rem;
+  }
+
+  /* Why */
+  .why {
+    padding: 50px 4%;
+  }
+
+  .why-header h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Dishes */
+  .dishes {
+    padding: 50px 4%;
+  }
+
+  .dishes h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+   /* MOBILE Staand (320px - 480px) */
+
+@media (max-width: 480px) {
+ 
+  nav {
+    padding: 0.8rem 4%;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 22px;
+  }
+
+  .mobile-nav a {
+    font-size: 1.3rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 80px 4% 40px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .hero-cta {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+  }
+
+  .menu-card {
+    max-width: 250px;
+    padding: 20px 15px;
+  }
+
+  .menu-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Story */
+  .story {
+    padding: 40px 4%;
+  }
+
+  .story-main-img,
+  .chef-img {
+    max-width: 250px;
+  }
+
+  .story-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .story-text p {
+    font-size: 0.85rem;
+  }
+
+  .btn-outline {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+  }
+
+  /* Why Section */
+  .why {
+    padding: 40px 4%;
+  }
+
+  .why-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .why-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  /* Dishes */
+  .dishes {
+    padding: 40px 4%;
+  }
+
+  .dishes h2 {
+    font-size: 1.6rem;
+  }
+
+  .dishes-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .dish-card p {
+    font-size: 0.95rem;
+  }
+
+  /* Newsletter */
+  .newsletter {
+    padding: 35px 4%;
+  }
+
+  .newsletter-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .newsletter-right p {
+    font-size: 0.85rem;
+  }
+
+  .newsletter input {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+
+  .newsletter button {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 4% 25px;
+    gap: 30px;
+  }
+
+  .footer-column h3 {
+    font-size: 1rem;
+  }
+
+  .footer-column p,
+  .footer-column ul li a {
+    font-size: 0.85rem;
+  }
+
+  .socials a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    padding: 15px 4%;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALLE MOBILE (max 375px)
+   ========================================== */
+
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 0.75rem;
+  }
+
+  .story-text h2,
+  .why-header h2,
+  .dishes h2,
+  .newsletter-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .mobile-nav a {
+    font-size: 1.2rem;
+    gap: 25px;
+  }
+}
+
+/* ==========================================
+   INTRO OVERLAY RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+  #intro-overlay {
+    padding: 20px;
+  }
+
+  .intro-brand-text {
+    font-size: 3rem;
+  }
+
+  .intro-tagline {
+    font-size: 1rem;
+  }
+
+  .intro-author-credit {
+    font-size: 0.85rem;
+  }
+
+  .intro-skip-btn {
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-brand-text {
+    font-size: 2.2rem;
+  }
+
+  .intro-tagline {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================
+   UTILITY CLASSES FOR RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Smooth scrolling for all devices */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  a {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

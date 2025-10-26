@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6hkpCjo7K+0yN9WzblcIjH+l2nVqRzNDSG7bZbJx5Iu0a76l0u/dkN95nF1u1Pz8tZH6lYpV8VQEeZ3+7bJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bistro | Bakery</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/hero.css">
@@ -24,45 +15,14 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
 
-  <div id="intro-overlay">
-    <button class="intro-skip-btn" id="skip-intro">Skip Intro</button>
-    
-    <div class="intro-container">
-     
-      <div class="intro-bg-animated"></div>
-      
-    
-      <div class="intro-light-orb orb-1"></div>
-      <div class="intro-light-orb orb-2"></div>
-      <div class="intro-light-orb orb-3"></div>
-      
-    
-      <div class="intro-particles"></div>
-      
-     
-      <div class="intro-content-main">
-        <div class="intro-brand">
-          <div class="intro-brand-text">BISTRO</div>
-        </div>
-        
-        <div class="intro-tagline">Taste the Art of Baking</div>
-        
-        <div class="intro-divider"></div>
-        
-        <div class="intro-author-credit">
-          <span class="author-label">Developed by</span>
-          <span class="author-name">Sihaam Yussuf</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<body>
 
   <nav class="navbar" id="navbar">
     <div class="nav-left">
       <div class="logo">
-        <img src="images/logo2.png" alt="Bakery Logo" style="height:48px; width:auto; display:inline-block; vertical-align:middle;">
+        <img src="images/logo2.png" alt="Bakery Logo"
+          style="height:48px; width:auto; display:inline-block; vertical-align:middle;">
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -71,8 +31,8 @@
       </ul>
     </div>
     <div class="nav-buttons">
-      <a href="#menu" class="btn nav-btn yellow">Menu</a>
-      <a href="#contact" class="btn nav-btn primary">Contact us</a>
+      <a href="menu.html" class="btn nav-btn yellow">Menu</a>
+      <a href="contact.html" class="btn nav-btn primary">Contact us</a>
     </div>
     <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
       <span></span>
@@ -81,7 +41,7 @@
     </div>
   </nav>
 
- 
+
   <div class="mobile-nav" id="mobileNav">
     <div class="mobile-close" onclick="closeMobileMenu()">&times;</div>
     <a href="#home" onclick="closeMobileMenu()">Home</a>
@@ -92,10 +52,11 @@
   </div>
 
 
-  <div class="container">
-    <main>
 
-      <header class="hero" id="home">
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
         <h1 class="hero-title">Bistro | Bakery</h1>
         <div class="hero-content">
           <div class="hero-description-block">
@@ -117,138 +78,152 @@
         <div class="scroll-indicator">
           <div class="scroll-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="8" r="2" stroke="#fff" stroke-width="2"/>
-              <path d="M12 10v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-              <path d="M9 17l3 3 3-3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="8" r="2" stroke="#fff" stroke-width="2" />
+              <path d="M12 10v7" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+              <path d="M9 17l3 3 3-3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
           <span class="scroll-text">Scroll Down</span>
         </div>
-      </header>
-    </main>
-  </div>
-
- 
-  <section class="story" id="story">
-    <div class="story-images">
-      <img src="images/yummy.jpg" alt="Fresh croissants" class="story-main-img">
-      <div class="chef-section" id="chef">
-        <img src="images/henry.png" alt="Chef Henry Hane" class="chef-img">
-        <p class="chef-name">CHEF HENRY HANÉ</p>
       </div>
-    </div>
-    <div class="story-text">
-      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;color:#fff;">Our story</h2>
-      <p style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;line-height:1.7;color:#fff;">
-        Founded in 2015 by pastry chef Julia Simmons, Sweet Delights Bakery has grown <br>
-        from a small, local shop to a beloved community landmark. Julia's dream was <br>
-        to create a space where people could gather, enjoy mouth-watering baked goods, <br>
-        and feel at home. Today, we continue to honor that vision with every cake, cookie, <br>
-        and loaf of bread that comes out of our ovens.
-      </p>
-      <a href="#why" class="btn-outline" style="font-family:'Inter',sans-serif;font-weight:500;">Explore more</a>
-      <img src="images/coffee.png" alt="Coffee cup decoration" class="story-decoration">
-    </div>
-  </section>
+    </section>
 
 
-  <section class="why" id="why">
-    <div class="why-header">
-      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">Why Dine with Us?</h2>
-      <p class="why-subtitle" style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:#222;">
-        Nestled in the heart of downtown, BISTRO offers an intimate dining experience where culinary artistry meets cozy charm.
-      </p>
-    </div>
 
-    <img src="images/croissant.svg" alt="Croissant illustration" class="croissant-bg">
 
-    <div class="why-grid">
-      <div class="card">
-        <img src="images/food.svg" alt="Ingredients">
-        <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Fresh, Local Ingredients:</h3>
-        <p>Explore More →</p>
+    <section class="story" id="story">
+      <div class="story-images">
+        <img src="images/yummy.jpg" alt="Fresh croissants" class="story-main-img">
+        <div class="chef-section" id="chef">
+          <img src="images/henry.png" alt="Chef Henry Hane" class="chef-img">
+          <p class="chef-name">CHEF HENRY HANÉ</p>
+        </div>
+      </div>
+      <div class="story-text">
+        <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;color:#fff;">Our story</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;line-height:1.7;color:#fff;">
+          Founded in 2015 by pastry chef Julia Simmons, Sweet Delights Bakery has grown <br>
+          from a small, local shop to a beloved community landmark. Julia's dream was <br>
+          to create a space where people could gather, enjoy mouth-watering baked goods, <br>
+          and feel at home. Today, we continue to honor that vision with every cake, cookie, <br>
+          and loaf of bread that comes out of our ovens.
+        </p>
+        <a href="#why" class="btn-outline" style="font-family:'Inter',sans-serif;font-weight:500;">Explore more</a>
+        <img src="images/coffee.png" alt="Coffee cup decoration" class="story-decoration">
+      </div>
+    </section>
+
+
+    <section class="why" id="why">
+      <div class="why-header">
+        <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">Why Dine with Us?</h2>
+        <p class="why-subtitle" style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:#222;">
+          Nestled in the heart of downtown, BISTRO offers an intimate dining experience where culinary artistry meets
+          cozy charm.
+        </p>
       </div>
 
-      <div class="card">
-        <img src="images/person-stars.svg" alt="Craft">
-        <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Artisan Craftsmanship:</h3>
-        <p>Explore More →</p>
-      </div>
+      <img src="images/croissant.svg" alt="Croissant illustration" class="croissant-bg">
 
-      <div class="card">
-        <img src="images/rainbow.svg" alt="Atmosphere">
-        <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Inviting Atmosphere:</h3>
-        <p>Explore More →</p>
-      </div>
+      <div class="why-grid">
+        <div class="card">
+          <img src="images/food.svg" alt="Ingredients">
+          <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Fresh, Local Ingredients:</h3>
+          <p>Explore More →</p>
+        </div>
 
-      <div class="card">
-        <img src="images/people.svg" alt="Community">
-        <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Community-Oriented:</h3>
-        <p>Explore More →</p>
-      </div>
+        <div class="card">
+          <img src="images/person-stars.svg" alt="Craft">
+          <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Artisan Craftsmanship:</h3>
+          <p>Explore More →</p>
+        </div>
 
-      <div class="food-showcase">
-        <img src="images/syrup.jpg" alt="Bakery showcase">
-        <button class="play-button">▶</button>
+        <div class="card">
+          <img src="images/rainbow.svg" alt="Atmosphere">
+          <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Inviting Atmosphere:</h3>
+          <p>Explore More →</p>
+        </div>
+
+        <div class="card">
+          <img src="images/people.svg" alt="Community">
+          <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;">Community-Oriented:</h3>
+          <p>Explore More →</p>
+        </div>
+
+        <div class="food-showcase">
+          <img src="images/syrup.jpg" alt="Bakery showcase">
+          <button class="play-button">▶</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
     <section class="dishes" id="gallery" style="position:relative;">
-    <img src="images/coffee.png" alt="Coffee SVG" style="position:absolute;left:16px;top:20px;width:170px;opacity:0.28;z-index:0;pointer-events:none;">
-    <img src="images/pancakes.svg" alt="Pancakes SVG" style="position:absolute;right:16px;top:20px;width:220px;opacity:0.32;z-index:0;pointer-events:none;">
-    <h2 style="position:relative;z-index:1;font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">Our customers' favorite dishes</h2>
-    <p class="dishes-subtitle" style="position:relative;z-index:1;font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:#222;">
-      Whether you're in the mood for a hearty breakfast, a leisurely lunch, <br>
-      or an intimate dinner, our culinary team is dedicated to providing <br>
-      an unforgettable gastronomic journey.
-    </p>
-    <div class="dishes-list" style="position:relative;z-index:1;">
-      <div class="dish-card">
-        <img src="images/pancakes.jpg" alt="Pastelito Pancakes">
-        <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Pastelito Pancakes</p>
+      <img src="images/coffee.png" alt="Coffee SVG"
+        style="position:absolute;left:16px;top:20px;width:170px;opacity:0.28;z-index:0;pointer-events:none;">
+      <img src="images/pancakes.svg" alt="Pancakes SVG"
+        style="position:absolute;right:16px;top:20px;width:220px;opacity:0.32;z-index:0;pointer-events:none;">
+      <h2 style="position:relative;z-index:1;font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">Our
+        customers' favorite dishes</h2>
+      <p class="dishes-subtitle"
+        style="position:relative;z-index:1;font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:#222;">
+        Whether you're in the mood for a hearty breakfast, a leisurely lunch, <br>
+        or an intimate dinner, our culinary team is dedicated to providing <br>
+        an unforgettable gastronomic journey.
+      </p>
+      <div class="dishes-list" style="position:relative;z-index:1;">
+        <div class="dish-card">
+          <img src="images/pancakes.jpg" alt="Pastelito Pancakes">
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Pastelito Pancakes</p>
+        </div>
+        <div class="dish-card">
+          <img src="images/file.jpg" alt="French Toast">
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Croissant Loaf French
+            Toast</p>
+        </div>
+        <div class="dish-card">
+          <img src="images/croissantjes.webp" alt="Croissants">
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Fresh Butter
+            Croissants</p>
+        </div>
+        <div class="dish-card">
+          <img src="images/bagel.jpg" alt="Smoked Salmon">
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Smoked Salmon Scramble
+          </p>
+        </div>
       </div>
-      <div class="dish-card">
-        <img src="images/file.jpg" alt="French Toast">
-        <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Croissant Loaf French Toast</p>
-      </div>
-      <div class="dish-card">
-        <img src="images/croissantjes.webp" alt="Croissants">
-        <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Fresh Butter Croissants</p>
-      </div>
-      <div class="dish-card">
-        <img src="images/bagel.jpg" alt="Smoked Salmon">
-        <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Smoked Salmon Scramble</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
 
-  <div class="newsletter">
-    <div class="newsletter-left" style="flex:1;display:flex;align-items:flex-start;justify-content:flex-start;">
-      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;line-height:1.1;">Subscribe to<br>our newsletter</h2>
-    </div>
-    <div class="newsletter-right" style="flex:2;display:flex;align-items:center;justify-content:space-between;width:100%;gap:32px;">
-      <div style="display:flex;align-items:center;gap:32px;width:100%;">
-        <p style="font-family:'Inter',sans-serif;font-size:0.98rem;font-weight:400;color:#222;margin:0;max-width:340px;">Stay up-to-date with the latest news, promotions, and exclusive offers! Subscribe to our newsletter now.</p>
-        <form style="display:flex;max-width:340px;width:100%;">
-          <input type="email" placeholder="Email">
-          <button type="submit">Subscribe</button>
-        </form>
+    <div class="newsletter">
+      <div class="newsletter-left" style="flex:1;display:flex;align-items:flex-start;justify-content:flex-start;">
+        <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;line-height:1.1;">Subscribe
+          to<br>our newsletter</h2>
+      </div>
+      <div class="newsletter-right"
+        style="flex:2;display:flex;align-items:center;justify-content:space-between;width:100%;gap:32px;">
+        <div style="display:flex;align-items:center;gap:32px;width:100%;">
+          <p
+            style="font-family:'Inter',sans-serif;font-size:0.98rem;font-weight:400;color:#222;margin:0;max-width:340px;">
+            Stay up-to-date with the latest news, promotions, and exclusive offers! Subscribe to our newsletter now.</p>
+          <form style="display:flex;max-width:340px;width:100%;">
+            <input type="email" placeholder="Email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
 
   <footer class="footer" id="contact">
     <div class="footer-column">
       <img src="images/logobb.png" alt="Bistro Bakery Logo" class="footer-logo">
       <p>600 Brickell Ave, Miami, FL 33131<br>
-         (305) 371-4568<br>
-         (WE DO NOT TAKE RESERVATIONS, NO EXCEPTIONS)
+        (305) 371-4568<br>
+        (WE DO NOT TAKE RESERVATIONS, NO EXCEPTIONS)
       </p>
-      <div class="socials">
+   <div class="socials">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-pinterest-p"></i></a>
@@ -279,20 +254,20 @@
     <div class="footer-column">
       <h3>Operational</h3>
       <p>Mon–Fri: 8:00AM – 4:00PM<br>
-         Sat–Sun: 8:00AM – 4:00PM</p>
+        Sat–Sun: 8:00AM – 4:00PM</p>
       <p><strong>You need a consult?</strong><br>
-         + (123) 980-567-8990</p>
+        + (123) 980-567-8990</p>
     </div>
   </footer>
 
- 
+
   <div class="footer-bottom">
     <p>&copy; 2025 BISTRO | BAKERY. All Rights Reserved. | Usman A.</p>
   </div>
 
 
   <script src="js/script.js"></script>
+  <script src="js/menu.js"></script>
 </body>
-</html>
 
- 
+</html>

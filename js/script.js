@@ -1,11 +1,9 @@
 window.addEventListener('DOMContentLoaded', function() {
-
-  
-  const intro = document.getElementById('intro-overlay');
-  const skipBtn = document.getElementById('skip-intro');
-  
-
+  const intro = document.querySelector('#intro-overlay');
+  const skipBtn = document.querySelector('#skip-intro');
   const particlesContainer = document.querySelector('.intro-particles');
+
+
   if (particlesContainer) {
     for (let i = 0; i < 9; i++) {
       const particle = document.createElement('div');
@@ -14,7 +12,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-
   if (intro) {
     setTimeout(() => {
       intro.style.opacity = '0';
@@ -38,8 +35,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
- 
-  
   const menuBtn = document.querySelector('.menu-card .view-btn');
   const menuModal = document.getElementById('menu-modal');
   const menuClose = document.querySelector('.menu-modal-close');
@@ -48,39 +43,42 @@ window.addEventListener('DOMContentLoaded', function() {
   if (menuBtn && menuModal && menuClose && menuList) {
     menuBtn.addEventListener('click', () => {
       menuModal.style.display = 'block';
-      menuList.innerHTML = '<div class="menu-loading">Loading menu...</div>';
-      
+      menuList.innerHTML = '<div class="menu-loading">Menu laden...</div>';
       fetch('db.json')
         .then(res => res.json())
         .then(data => {
-          if (data.favorites && data.favorites.length) {
-            menuList.innerHTML = data.favorites.map(item => `
-              <div class="menu-item">
-                <img src="${item.image}" alt="${item.name}">
-                <div class="menu-info">
-                  <div class="menu-name">${item.name}</div>
-                  <div class="menu-desc">${item.description}</div>
+          if (data.categories && data.categories.length) {
+            menuList.innerHTML = data.categories.map(cat => `
+              <div class="menu-category">
+                <h3 class="menu-category-title">${cat.name}</h3>
+                <div class="menu-items">
+                  ${cat.items.map(item => `
+                    <div class="menu-item">
+                      <img src="${item.image}" alt="${item.name}" class="menu-item-img">
+                      <div class="menu-item-info">
+                        <div class="menu-item-name">${item.name}</div>
+                        <div class="menu-item-desc">${item.description}</div>
+                      </div>
+                    </div>
+                  `).join('')}
                 </div>
               </div>
             `).join('');
           } else {
-            menuList.innerHTML = '<div class="menu-empty">No menu items found.</div>';
+            menuList.innerHTML = '<div class="menu-empty">Geen menu items gevonden.</div>';
           }
         })
         .catch(() => {
-          menuList.innerHTML = '<div class="menu-error">Failed to load menu.</div>';
+          menuList.innerHTML = '<div class="menu-error">Menu laden mislukt.</div>';
         });
     });
-    
     menuClose.addEventListener('click', () => {
       menuModal.style.display = 'none';
     });
-    
     window.addEventListener('click', (e) => {
       if (e.target === menuModal) menuModal.style.display = 'none';
     });
   }
-
 
   
   window.toggleMobileMenu = function() {
