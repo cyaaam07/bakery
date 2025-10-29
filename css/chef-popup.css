@@ -1,0 +1,106 @@
+
+.chef-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 1000;
+  width: 90%;
+  max-width: 380px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.chef-popup.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+body.popup-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.35s ease;
+}
+
+/* Chef Image */
+.chef-popup img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.95) contrast(1.05);
+  cursor: default;
+}
+
+.chef-popup img:hover {
+  transform: scale(1.05);
+}
+
+/* Content */
+.chef-popup-content {
+  padding: 24px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff, #fafafa);
+}
+
+.chef-popup-content h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: 700;
+}
+
+.chef-popup-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Close Button */
+.chef-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chef-popup-close:hover {
+  background: #f0f0f0;
+  transform: rotate(90deg);
+}
+
+
+@media (max-width: 480px) {
+  .chef-popup-content h2 {
+    font-size: 1.3rem;
+  }
+  .chef-popup-content p {
+    font-size: 0.95rem;
+  }
+}

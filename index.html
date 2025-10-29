@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6hkpCjo7K+0yN9WzblcIjH+l2nVqRzNDSG7bZbJx5Iu0a76l0u/dkN95nF1u1Pz8tZH6lYpV8VQEeZ3+7bJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bistro | Bakery</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6hkpCjo7K+0yN9WzblcIjH+l2nVqRzNDSG7bZbJx5Iu0a76l0u/dkN95nF1u1Pz8tZH6lYpV8VQEeZ3+7bJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/hero.css">
@@ -14,10 +18,12 @@
   <link rel="stylesheet" href="css/newsletter.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/chef-popup.css"> <!-- Chef Popup Styles -->
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-left">
       <div class="logo">
@@ -26,7 +32,7 @@
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#chef">Chef</a></li>
+        <li><a href="#chef" id="chefLink">Chef</a></li> <!-- ID added for JS -->
         <li><a href="#gallery">Gallery</a></li>
       </ul>
     </div>
@@ -41,7 +47,7 @@
     </div>
   </nav>
 
-
+  <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav">
     <div class="mobile-close" onclick="closeMobileMenu()">&times;</div>
     <a href="#home" onclick="closeMobileMenu()">Home</a>
@@ -51,10 +57,10 @@
     <a href="#contact" onclick="closeMobileMenu()">Contact us</a>
   </div>
 
-
-
+  <!-- MAIN CONTENT -->
   <main>
 
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="container">
         <h1 class="hero-title">Bistro | Bakery</h1>
@@ -88,9 +94,7 @@
       </div>
     </section>
 
-
-
-
+    <!-- STORY SECTION -->
     <section class="story" id="story">
       <div class="story-images">
         <img src="images/yummy.jpg" alt="Fresh croissants" class="story-main-img">
@@ -113,13 +117,12 @@
       </div>
     </section>
 
-
+    <!-- WHY SECTION -->
     <section class="why" id="why">
       <div class="why-header">
         <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">Why Dine with Us?</h2>
         <p class="why-subtitle" style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:#222;">
-          Nestled in the heart of downtown, BISTRO offers an intimate dining experience where culinary artistry meets
-          cozy charm.
+          Nestled in the heart of downtown, BISTRO offers an intimate dining experience where culinary artistry meets cozy charm.
         </p>
       </div>
 
@@ -157,14 +160,15 @@
       </div>
     </section>
 
-
+    <!-- DISHES / GALLERY -->
     <section class="dishes" id="gallery" style="position:relative;">
       <img src="images/coffee.png" alt="Coffee SVG"
         style="position:absolute;left:16px;top:20px;width:170px;opacity:0.28;z-index:0;pointer-events:none;">
       <img src="images/pancakes.svg" alt="Pancakes SVG"
         style="position:absolute;right:16px;top:20px;width:220px;opacity:0.32;z-index:0;pointer-events:none;">
-      <h2 style="position:relative;z-index:1;font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">Our
-        customers' favorite dishes</h2>
+      <h2 style="position:relative;z-index:1;font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;">
+        Our customers' favorite dishes
+      </h2>
       <p class="dishes-subtitle"
         style="position:relative;z-index:1;font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;color:#222;">
         Whether you're in the mood for a hearty breakfast, a leisurely lunch, <br>
@@ -178,23 +182,20 @@
         </div>
         <div class="dish-card">
           <img src="images/file.jpg" alt="French Toast">
-          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Croissant Loaf French
-            Toast</p>
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Croissant Loaf French Toast</p>
         </div>
         <div class="dish-card">
           <img src="images/croissantjes.webp" alt="Croissants">
-          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Fresh Butter
-            Croissants</p>
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Fresh Butter Croissants</p>
         </div>
         <div class="dish-card">
           <img src="images/bagel.jpg" alt="Smoked Salmon">
-          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Smoked Salmon Scramble
-          </p>
+          <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.08rem;color:#222;">Smoked Salmon Scramble</p>
         </div>
       </div>
     </section>
 
-
+    <!-- NEWSLETTER -->
     <div class="newsletter">
       <div class="newsletter-left" style="flex:1;display:flex;align-items:flex-start;justify-content:flex-start;">
         <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;line-height:1.1;">Subscribe
@@ -213,9 +214,10 @@
         </div>
       </div>
     </div>
+
   </main>
 
-
+  <!-- FOOTER -->
   <footer class="footer" id="contact">
     <div class="footer-column">
       <img src="images/logobb.png" alt="Bistro Bakery Logo" class="footer-logo">
@@ -223,7 +225,7 @@
         (305) 371-4568<br>
         (WE DO NOT TAKE RESERVATIONS, NO EXCEPTIONS)
       </p>
-   <div class="socials">
+      <div class="socials">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-pinterest-p"></i></a>
@@ -260,14 +262,24 @@
     </div>
   </footer>
 
-
   <div class="footer-bottom">
     <p>&copy; 2025 BISTRO | BAKERY. All Rights Reserved. | Usman A.</p>
   </div>
 
-
+  <!-- SCRIPTS -->
   <script src="js/script.js"></script>
   <script src="js/menu.js"></script>
-</body>
 
+  <!-- Chef Popup (Correct placement) -->
+  <div class="chef-popup" id="chefPopup">
+    <button class="chef-popup-close" id="closeChefPopup" aria-label="Close">&times;</button>
+    <img src="images/henry.png" alt="Chef Henry Hané">
+    <div class="chef-popup-content">
+      <h2>Chef Henry Hané</h2>
+      <p>Chef Henry Hané is a world-renowned pastry chef with over 20 years of experience in creating exquisite desserts and pastries.</p>
+    </div>
+  </div>
+
+<script src="js/script.js"></script>
+</body>
 </html>

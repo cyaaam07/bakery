@@ -94,4 +94,29 @@ window.addEventListener('DOMContentLoaded', function() {
       mobileNav.classList.remove('active');
     }
   };
+
+  // Chef Popup Logic
+  const chefPopup = document.getElementById('chefPopup');
+  const closeChefPopup = document.getElementById('closeChefPopup');
+  const chefLink = document.querySelector('a[href="#chef"]');
+
+  if (chefPopup && closeChefPopup && chefLink) {
+    chefLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      chefPopup.style.display = 'block';
+    });
+
+    closeChefPopup.addEventListener('click', () => {
+      chefPopup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === chefPopup) {
+        chefPopup.style.display = 'none';
+      }
+    });
+  }
+
+
 });
+
