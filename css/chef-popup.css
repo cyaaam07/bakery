@@ -1,22 +1,24 @@
+/* ===================================
+   CHEF POPUP - MODERN & CLEAN
+   =================================== */
 
+/* Popup Container */
 .chef-popup {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  z-index: 1000;
+  z-index: 2000;
   width: 90%;
-  max-width: 380px;
-  background-color: #fff;
+  max-width: 600px;
+  background: #fff;
   border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.35s ease;
-  font-family: 'Inter', sans-serif;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
-
 
 .chef-popup.active {
   opacity: 1;
@@ -24,83 +26,192 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-
-body.popup-open::before {
-  content: "";
+/* Backdrop */
+.chef-popup-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 900;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.chef-popup-backdrop.active {
   opacity: 1;
   pointer-events: all;
-  transition: opacity 0.35s ease;
-}
-
-/* Chef Image */
-.chef-popup img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  filter: brightness(0.95) contrast(1.05);
-  cursor: default;
-}
-
-.chef-popup img:hover {
-  transform: scale(1.05);
-}
-
-/* Content */
-.chef-popup-content {
-  padding: 24px 20px;
-  text-align: center;
-  background: linear-gradient(to bottom, #fff, #fafafa);
-}
-
-.chef-popup-content h2 {
-  margin: 0 0 12px;
-  font-size: 1.5rem;
-  color: #222;
-  font-weight: 700;
-}
-
-.chef-popup-content p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
 }
 
 /* Close Button */
 .chef-popup-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background: rgba(255, 255, 255, 0.95);
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  line-height: 34px;
-  text-align: center;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.chef-popup-close::before,
+.chef-popup-close::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.chef-popup-close::before {
+  transform: rotate(45deg);
+}
+
+.chef-popup-close::after {
+  transform: rotate(-45deg);
 }
 
 .chef-popup-close:hover {
-  background: #f0f0f0;
+  background: #d4af37;
   transform: rotate(90deg);
 }
 
+.chef-popup-close:hover::before,
+.chef-popup-close:hover::after {
+  background: #000;
+}
 
-@media (max-width: 480px) {
-  .chef-popup-content h2 {
-    font-size: 1.3rem;
+/* Image */
+.chef-popup img:not(.chef-popup-close) {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.chef-popup-content {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff 0%, #f9f9f9 100%);
+}
+
+.chef-popup-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.chef-popup-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 25px 0;
+}
+
+.chef-popup-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 30px 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Social Links in Popup */
+.chef-popup-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.chef-popup-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.chef-popup-socials a:hover {
+  background: #d4af37;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chef-popup {
+    width: 95%;
+    max-width: 500px;
   }
+  
+  .chef-popup img:not(.chef-popup-close) {
+    height: 280px;
+  }
+  
+  .chef-popup-content {
+    padding: 30px 25px;
+  }
+  
+  .chef-popup-content h2 {
+    font-size: 1.8rem;
+  }
+  
   .chef-popup-content p {
     font-size: 0.95rem;
+  }
+  
+  .chef-popup-close {
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chef-popup img:not(.chef-popup-close) {
+    height: 240px;
+  }
+  
+  .chef-popup-content {
+    padding: 25px 20px;
+  }
+  
+  .chef-popup-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .chef-popup-content h3 {
+    font-size: 0.85rem;
+  }
+  
+  .chef-popup-content p {
+    font-size: 0.9rem;
   }
 }
