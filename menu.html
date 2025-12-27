@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Bistro Bakery</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+  <!-- Animated Background Elements -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <img src="images/logo2.png" alt="Bakery Logo" style="height:48px; width:auto;">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#chef">Chef</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="nav-buttons">
+      <a href="menu.html" class="btn nav-btn yellow">Menu</a>
+      <a href="contact.html" class="btn nav-btn primary">Contact us</a>
+      <button class="cart-btn" onclick="toggleCart()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart-state">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <p class="empty-cart">Your cart is empty</p>
+        <p class="empty-cart-sub">Add some delicious items!</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="checkout-btn">
+        <span>Checkout Now</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="menu-hero">
+    <div class="hero-content">
+      <span class="hero-badge"> Fresh Daily</span>
+      <h1 class="menu-title">Our Menu</h1>
+      <p class="menu-subtitle">Handcrafted pastries & baked goods made with love</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Items</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Fresh</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">Daily</span>
+          <span class="stat-label">Baked</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Content -->
+  <div class="menu-container">
+    
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="tab-btn active" onclick="scrollToSection('cakes')">
+        <span></span> Cakes
+      </button>
+      <button class="tab-btn" onclick="scrollToSection('cookies')">
+        <span></span> Cookies
+      </button>
+      <button class="tab-btn" onclick="scrollToSection('bestsellers')">
+        <span></span> Best Sellers
+      </button>
+    </div>
+
+    <!-- Cakes Section -->
+    <section class="menu-section" id="cakes">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Our Cakes</h2>
+          <p class="section-desc">Layers of perfection in every bite</p>
+        </div>
+        <span class="section-icon"></span>
+      </div>
+      <div class="menu-grid" id="cakesGrid"></div>
+    </section>
+
+    <!-- Cookies Section -->
+    <section class="menu-section" id="cookies">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Our Cookies</h2>
+          <p class="section-desc">Crispy, chewy, absolutely delicious</p>
+        </div>
+        <span class="section-icon"></span>
+      </div>
+      <div class="menu-grid" id="cookiesGrid"></div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="menu-section" id="bestsellers">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Best Sellers</h2>
+          <p class="section-desc">Customer favorites you can't miss</p>
+        </div>
+        <span class="section-icon"></span>
+      </div>
+      <div class="menu-grid" id="bestsellersGrid"></div>
+    </section>
+  </div>
+
+
+  <button class="fab-cart" onclick="toggleCart()">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="fab-badge" id="fabBadge">0</span>
+  </button>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

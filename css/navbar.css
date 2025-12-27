@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px 4%;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 10px 25px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn.yellow {
+  background: var(--yellow);
+  color: #000;
+}
+
+.nav-btn.yellow:hover {
+  background: #eecf61;
+  transform: translateY(-2px);
+}
+
+.nav-btn.primary {
+  background: #fff;
+  color: #000;
+}
+
+.nav-btn.primary:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}

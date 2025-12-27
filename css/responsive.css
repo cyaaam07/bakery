@@ -1,0 +1,728 @@
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  background: none;
+  border: none;
+  z-index: 10000;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.98);
+  z-index: 9999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav.active {
+  display: flex;
+  opacity: 1;
+}
+
+.mobile-nav a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #d4af37;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.mobile-close:hover {
+  transform: rotate(90deg);
+}
+
+/* Extra Large Desktop (1600px+) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .why-grid {
+    gap: 40px;
+  }
+  
+  .dishes-list {
+    gap: 40px;
+  }
+}
+
+/* Large Desktop (1400px - 1599px) */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .why-grid {
+    gap: 35px;
+  }
+  
+  .food-showcase {
+    flex: 0 0 320px;
+  }
+}
+
+/* Standard Desktop (1200px - 1399px) */
+@media (max-width: 1399px) {
+  nav {
+    padding: 1rem 5%;
+  }
+  
+  .hero {
+    padding: 120px 5% 80px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .why-grid {
+    gap: 25px;
+  }
+  
+  .food-showcase {
+    flex: 0 0 300px;
+  }
+
+  .story {
+    padding: 100px 5%;
+  }
+
+  .dishes {
+    padding: 100px 5%;
+  }
+
+  .dishes-list {
+    gap: 20px;
+  }
+
+  .newsletter {
+    padding: 60px 5%;
+  }
+}
+
+/* Laptop/Small Desktop (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .why-grid {
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 250px;
+  }
+  
+  .food-showcase {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-height: 350px;
+  }
+  
+  .dishes-list {
+    flex-wrap: wrap;
+  }
+  
+  .dish-card {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (max-width: 1023px) {
+  .hero {
+    padding: 100px 6% 60px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .hero-description-block {
+    text-align: center;
+  }
+
+  .menu-card {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .story {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    padding: 80px 6%;
+  }
+
+  .story-images {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .story-text {
+    max-width: 100%;
+  }
+
+  .story-decoration {
+    display: none;
+  }
+
+  .why {
+    padding: 80px 6%;
+  }
+
+  .why-grid {
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .croissant-bg {
+    width: 150px;
+  }
+
+  .dishes {
+    padding: 80px 6%;
+  }
+
+  .dishes-list {
+    gap: 20px;
+  }
+  
+  .dish-card {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .newsletter {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 6%;
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .newsletter-right > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 60px 6% 30px;
+  }
+}
+
+/* Tablet Portrait (768px max) */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-buttons {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    padding: 1rem 4%;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .hero {
+    padding: 100px 4% 60px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-cta {
+    padding: 12px 30px;
+    font-size: 0.95rem;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+  }
+
+  .menu-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 25px 20px;
+  }
+
+  .story {
+    padding: 60px 4%;
+    gap: 40px;
+  }
+
+  .story-images {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .story-main-img,
+  .chef-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .story-text h2 {
+    font-size: 2rem;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+  }
+
+  .story-text p br {
+    display: none;
+  }
+
+  .why {
+    padding: 60px 4%;
+  }
+
+  .why-header h2 {
+    font-size: 2rem;
+  }
+
+  .why-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .why-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .food-showcase {
+    flex: 1 1 100%;
+    min-height: 300px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .croissant-bg {
+    width: 120px;
+    opacity: 0.15;
+  }
+
+  .dishes {
+    padding: 60px 4%;
+  }
+
+  .dishes h2 {
+    font-size: 2rem;
+  }
+
+  .dishes-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .dishes-subtitle br {
+    display: none;
+  }
+
+  .dishes-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dish-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .newsletter {
+    padding: 40px 4%;
+  }
+
+  .newsletter-left h2 {
+    font-size: 2rem;
+  }
+
+  .newsletter-right p {
+    font-size: 0.9rem;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 50px 4% 30px;
+    text-align: center;
+    gap: 35px;
+  }
+  
+  .footer-column::before {
+    display: none !important;
+  }
+  
+  .footer-column {
+    padding: 0;
+  }
+
+  .footer-logo {
+    height: 50px;
+    margin: 0 auto 20px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .footer-column ul {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    padding: 20px 4%;
+    font-size: 0.85rem;
+  }
+}
+
+/* Large Mobile (576px - 767px) */
+@media (max-width: 576px) {
+  .hero {
+    padding: 90px 4% 50px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+  }
+
+  .story {
+    padding: 50px 4%;
+  }
+
+  .story-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .story-text p {
+    font-size: 0.9rem;
+  }
+
+  .why {
+    padding: 50px 4%;
+  }
+
+  .why-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .dishes {
+    padding: 50px 4%;
+  }
+
+  .dishes h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Standard Mobile (480px max) */
+@media (max-width: 480px) {
+  nav {
+    padding: 0.8rem 4%;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 22px;
+  }
+
+  .mobile-nav a {
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    padding: 80px 4% 40px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .hero-cta {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+  }
+
+  .menu-card {
+    max-width: 250px;
+    padding: 20px 15px;
+  }
+
+  .menu-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .story {
+    padding: 40px 4%;
+  }
+
+  .story-main-img,
+  .chef-img {
+    max-width: 250px;
+  }
+
+  .story-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .story-text p {
+    font-size: 0.85rem;
+  }
+
+  .btn-outline {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+  }
+
+  .why {
+    padding: 40px 4%;
+  }
+
+  .why-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .why-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .dishes {
+    padding: 40px 4%;
+  }
+
+  .dishes h2 {
+    font-size: 1.6rem;
+  }
+
+  .dishes-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .dish-card p {
+    font-size: 0.95rem;
+  }
+  
+  .dish-card img {
+    height: 200px;
+  }
+
+  .newsletter {
+    padding: 35px 4%;
+  }
+
+  .newsletter-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .newsletter-right p {
+    font-size: 0.85rem;
+  }
+
+  .newsletter input {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+
+  .newsletter button {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    padding: 40px 4% 25px;
+    gap: 30px;
+  }
+
+  .footer-column h3 {
+    font-size: 1rem;
+  }
+
+  .footer-column p,
+  .footer-column ul li a {
+    font-size: 0.85rem;
+  }
+
+  .socials a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    padding: 15px 4%;
+  }
+}
+
+/* Extra Small Mobile (375px max) */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 0.75rem;
+  }
+
+  .story-text h2,
+  .why-header h2,
+  .dishes h2,
+  .newsletter-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .mobile-nav a {
+    font-size: 1.2rem;
+  }
+  
+  .dish-card img {
+    height: 180px;
+  }
+}
+
+/* Smooth scrolling for all devices */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
